@@ -1,0 +1,1 @@
+"""Bilişsel Çekirdek Motoru - Dış Eklenti ve Adaptör Paketi."""

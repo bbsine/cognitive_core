@@ -1,0 +1,18 @@
+# Önbellek ve derleme dosyalarý
+__pycache__/
+*.py[cod]
+*.class
+.pytest_cache/
+
+# Kalýcý bellek ve veri setleri (Depo temiz gitsin)
+storage/knowledge_base.json
+data/*.txt
+data/*.csv
+data/*.tsv
+
+# IDE ve geçici dosyalar
+.vs/
+.vscode/
+*.user
+*.suo
+.env

@@ -1,0 +1,87 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7e670500-180e-426b-b3dd-6c540cace9ee</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>cognitive_core</Name>
+    <RootNamespace>cognitive_core</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="adapters\research\gemini_research_agent.py" />
+    <Compile Include="adapters\research\__init__.py" />
+    <Compile Include="adapters\storage\json_memory_repo.py" />
+    <Compile Include="adapters\storage\__init__.py" />
+    <Compile Include="adapters\__init__.py" />
+    <Compile Include="core\application\ports.py" />
+    <Compile Include="core\application\services.py" />
+    <Compile Include="core\application\__init__.py" />
+    <Compile Include="core\domain\entities.py" />
+    <Compile Include="core\domain\events.py" />
+    <Compile Include="core\domain\exceptions.py" />
+    <Compile Include="core\domain\values.py" />
+    <Compile Include="core\domain\__init__.py" />
+    <Compile Include="core\infrastructure\neural_engine.py" />
+    <Compile Include="core\infrastructure\research_agent.py" />
+    <Compile Include="core\infrastructure\router.py" />
+    <Compile Include="core\infrastructure\__init__.py" />
+    <Compile Include="core\infrastructure\memory_repository.py" />
+    <Compile Include="core\interfaces\facade.py" />
+    <Compile Include="core\interfaces\__init__.py" />
+    <Compile Include="run_engine.py" />
+    <Compile Include="stress_test.py" />
+    <Compile Include="tests\adversarial\test_system_stress.py" />
+    <Compile Include="tests\integration\test_autonomous_pipeline.py" />
+    <Compile Include="tests\integration\__init__.py" />
+    <Compile Include="tests\integration\test_multi_regime_stress.py" />
+    <Compile Include="tests\unit\test_application_orchestrator.py" />
+    <Compile Include="tests\unit\test_domain_invariants.py" />
+    <Compile Include="tests\unit\test_engine_facade.py" />
+    <Compile Include="tests\unit\test_gemini_research_agent.py" />
+    <Compile Include="tests\unit\test_infrastructure_adapters.py" />
+    <Compile Include="tests\unit\test_json_memory_repo.py" />
+    <Compile Include="tests\unit\test_research_and_consensus.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="adapters\storage\" />
+    <Folder Include="adapters\research\" />
+    <Folder Include="core\" />
+    <Folder Include="core\domain\" />
+    <Folder Include="core\application\" />
+    <Folder Include="core\infrastructure\" />
+    <Folder Include="core\interfaces\" />
+    <Folder Include="adapters\" />
+    <Folder Include="data\" />
+    <Folder Include="tests\" />
+    <Folder Include="tests\adversarial\" />
+    <Folder Include="tests\integration\" />
+    <Folder Include="tests\unit\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ARCHITECTURE.md" />
+    <Content Include="MEMORY.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
